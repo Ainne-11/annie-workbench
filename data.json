@@ -1,10 +1,40 @@
 {
   "version": 2,
-  "weeklyPool": {},
+  "weeklyPool": {
+    "2026-W30": [
+      {
+        "id": "ms0e3b4guqmq",
+        "title": "跑步",
+        "category": "longterm",
+        "assignedDate": "2026-07-25",
+        "completed": true,
+        "completedDate": "2026-07-25",
+        "createdAt": 1784985184528
+      },
+      {
+        "id": "ms0e3ozswyv6",
+        "title": "游泳",
+        "category": "longterm",
+        "assignedDate": "2026-07-26",
+        "completed": false,
+        "completedDate": null,
+        "createdAt": 1784985202504
+      },
+      {
+        "id": "ms0e3t0iyqu9",
+        "title": "跳舞",
+        "category": "longterm",
+        "assignedDate": "2026-07-25",
+        "completed": true,
+        "completedDate": "2026-07-25",
+        "createdAt": 1784985207714
+      }
+    ]
+  },
   "reflections": {},
   "journals": {},
   "goals": [],
   "habits": [],
   "skills": [],
-  "updatedAt": 1784984935258
+  "updatedAt": 1784985220158
 }
