@@ -594,7 +594,11 @@ async function getRemoteData(){
   if(res.status===404)return null;
   if(!res.ok)throw new Error('拉取失败:'+res.status);
   const json=await res.json();
-  const content=JSON.parse(atob(json.content.replace(/\n/g,'')));
+  // 用 TextDecoder 正确解码 UTF-8，避免中文乱码（atob 只能解 Latin-1）
+  const bin=atob(json.content.replace(/\n/g,''));
+  const bytes=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  const content=JSON.parse(new TextDecoder('utf-8').decode(bytes));
   return{data:content,sha:json.sha};
 }
 
